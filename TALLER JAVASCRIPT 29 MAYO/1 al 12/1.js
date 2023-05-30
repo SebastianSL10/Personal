@@ -18,7 +18,7 @@ function par() {
 /////Ejercicio 3/////
 
 function NPDesc() {
-    numero=parseInt(prompt("Digite un números"));
+    numero=parseInt(prompt("Digite un númerozz"));
 // Si el número es impar, restar 1 para obtener el número par más cercano
 if (numero % 2 !== 0) {
   numero -= 1;
