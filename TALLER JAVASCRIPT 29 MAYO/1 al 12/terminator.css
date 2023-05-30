@@ -47,8 +47,6 @@ body{
     color: rgb(8, 126, 180);
     font-family: cursive;
     background-color: azure;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
     background-size: cover;
 }
 header{
@@ -60,7 +58,8 @@ header{
     padding: 10px;
 }
 .container{
-    margin-top: 10em;
+    margin-top: 8em;
+    margin-bottom: 7em;
 }
 .col input{
     border: 1px solid rgb(8, 126, 180);
@@ -68,4 +67,20 @@ header{
     border-radius: 5px;
     outline: none;
     font-size: 1em;
+    size: initial;
+}
+#pare{
+    overflow: scroll;
+    display: none;
+    height: 35em;
+}
+#cuadrado{
+    overflow: scroll;
+    display: none;
+    height: 35em;
+}
+footer{
+    background-color: rgb(9, 61, 85);
+    width: 100%;
+    height: 50px;
 }

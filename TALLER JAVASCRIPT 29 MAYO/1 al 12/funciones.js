@@ -30,15 +30,14 @@ function ej1() {
 
     tabla.appendChild(tblBody);
     cua.appendChild(tabla);
-    document.getElementById("cuadrado").style.display = "block";
-    tabla.setAttribute("class","table table-bordered border-primary");
-    fila.setAttribute("class","table table-bordered border-primary");
+    tabla.setAttribute("class","table table-bordered border-info");
+    fila.setAttribute("class","table table-bordered border-info");
     tabla.setAttribute("border", "3");
-    
+    document.getElementById("cuadrado").style.display = "block";
 }
 /////Ejercicio 2//////////
 function ej2() {
-    var cua = document.getElementById("par");
+    var cua = document.getElementById("pare");
     var tabla = document.createElement("table");
     var tblBody = document.createElement("tbody");
     var fila = document.createElement("tr");
@@ -61,7 +60,7 @@ function ej2() {
         tblBody.appendChild(fila);
     }
     }
-    var cuan = document.getElementById("par");
+    var cuan = document.getElementById("pare");
     var tabla2 = document.createElement("table");
     var tblBody2 = document.createElement("tbody");
     var fila2 = document.createElement("tr");
@@ -84,15 +83,16 @@ function ej2() {
     
     tabla2.appendChild(tblBody2);
     cuan.appendChild(tabla2);
-    tabla2.setAttribute("class","table table-bordered border-success");
-    fila2.setAttribute("class","table table-bordered border-success");
+    tabla2.setAttribute("class","table table-bordered border-info");
+    fila2.setAttribute("class","table table-bordered border-info");
     tabla2.setAttribute("border", "3");
 
     tabla.appendChild(tblBody);
     cua.appendChild(tabla);
-    tabla.setAttribute("class","table table-bordered border-success");
-    fila.setAttribute("class","table table-bordered border-success");
+    tabla.setAttribute("class","table table-bordered border-info");
+    fila.setAttribute("class","table table-bordered border-info");
     tabla.setAttribute("border", "3");
+    document.getElementById("pare").style.display = "block";
     
 }
 /*function ej2() {
@@ -175,9 +175,9 @@ function numbusc(){
     arreglo.forEach(busca);
     let r=arreglo.indexOf(num)
     if (d == false){
-        e.value =("<br>"+"El número no se encontró")
+        e.value =("El número no se encontró")
     }else if(d==true)
-        e.value =("<br>"+"El número esta en la posición:" +r);
+        e.value =("El número esta en la posición:" +r);
 }
 /////////Ejercicio 6/////////
 function limit() {
