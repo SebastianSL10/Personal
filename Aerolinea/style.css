@@ -1,0 +1,50 @@
+body{
+    background-color: aliceblue;
+}
+.col{
+    margin-top: 5em;
+    width: 35%;
+    padding: 1%;
+    text-decoration: rgb(148, 154, 160);
+    border: 8px solid  rgb(54, 3, 150) ;
+}
+img{
+    width: 15%;
+}
+h1{
+    margin-top: -2em;
+    text-align: center;
+}
+.boton{
+    text-decoration: none;
+}  
+
+
+
+
+
+
+/*
+    <p>Seleccione un itinerario:</p>
+            <input type="radio" id="iti1" name="iti">
+            <label for="age1">BOGOTÁ - CALI - $ 190000</label><br>
+            <input type="radio" id="age2" name="iti">
+            <label for="age2">BOGOTÁ - MEDELLÍN - $ 165000</label><br>  
+            <input type="radio" id="age3" name="iti" >
+            <label for="age3">BOGOTÁ - MANIZALES - $ 135000</label><br>
+            <input type="radio" id="age2" name="iti">
+            <label for="age2">BOGOTÁ - BARRANQUILLA - $ 245000</label><br>
+            <input type="radio" id="age2" name="iti">
+            <label for="age2">CALI - BOGOTÁ - $ 190000</label><br>
+            <input type="radio" id="age2" name="iti">
+            <label for="age2">MEDELLÍN - BOGOTÁ - $ 165000</label><br> 
+            <input type="radio" id="age2" name="iti">
+            <label for="age2">MANIZALES - BOGOTÁ - $ 135000</label><br> 
+            <input type="radio" id="age2" name="iti">
+            <label for="age2">BARRANQUILLA - BOGOTÁ - $ 245000</label>  
+            <div class="parraf">
+                <p>Click aquí para ver los terminos y condiciones <a href="###">Terminos y condiciones</a></p>
+            </div>         
+            <div class="boton">
+                <input type="submit" value="Enviar" />
+    background-color: rgb(47, 7, 99);*/

@@ -1,0 +1,205 @@
+<DOCTYPE html>
+    <html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Lista desplegable</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <script src="aero.js"></script>
+
+    <body>
+        <div>
+            <img src="latam-logo.png" alt="">
+        </div>
+        <h1>Latam Airlanes</h1>
+        <form name="formu" id="formu" action="" method="post" onsubmit="return comprobar(),list(),mis()">
+            <div class="col">
+                <h2>Datos del Viajero</h2>
+                <div class="formulario">
+                    <label for="email">Nombres y Apellidos:</label>
+                    <input type="text" name="Nom" id="Nom"></input>
+                </div><br>
+                <div class="formulario">
+                    <label for="direccion">Dirección:</label>
+                    <input type="text" name="Dir" id="Dir"></input>
+                </div><br>
+                <div class="formulario">
+                    <label for="telefono">Teléfono:</label>
+                    <input type="text" name="tel" id="tel"></input>
+                </div><br>
+                <div class="formulario">
+                    <label for="telefono">Correo Electrónico:</label>
+                    <input type="text" name="Correo" id="Correo"></input>
+                </div><br>
+                <div class="formulario">
+                    <label for="telefono">Edad:</label>
+                    <input type="text" name="edad" id="edad"></input>
+                </div><br>
+                <div class="formulario">
+                    <label for="telefono">Peso del Equipaje:</label>
+                    <input type="text" name="peso" placeholder="(Kg)" id="peso"></input>
+                </div><br>
+                <div class="formulario">
+                    Género: <select name="gen" id="gen">
+                        <option value="">Seleccione su Género</option>
+                        <option value="Masc">Masculino</option>
+                        <option value="Fem">Femenino</option>
+                        <option value="Otr">Otro</option>
+                    </select>
+                </div>
+                <p>Seleccione un itinerario:</p>
+                <input type="radio" id="iti" name="iti">
+                <label for="age1">BOGOTÁ - CALI - $ 190.000</label><br>
+                <input type="radio" id="iti" name="iti">
+                <label for="age2">BOGOTÁ - MEDELLÍN - $ 165.000</label><br>
+                <input type="radio" id="iti" name="iti">
+                <label for="age3">BOGOTÁ - MANIZALES - $ 135.000</label><br>
+                <input type="radio" id="iti" name="iti">
+                <label for="age2">BOGOTÁ - BARRANQUILLA - $ 245.000</label><br>
+                <input type="radio" id="iti" name="iti">
+                <label for="age2">CALI - BOGOTÁ - $ 190.000</label><br>
+                <input type="radio" id="iti" name="iti">
+                <label for="age2">MEDELLÍN - BOGOTÁ - $ 165.000</label><br>
+                <input type="radio" id="iti" name="iti">
+                <label for="age2">MANIZALES - BOGOTÁ - $ 135.000</label><br>
+                <input type="radio" id="iti" name="iti">
+                <label for="age2">BARRANQUILLA - BOGOTÁ - $ 245.000</label>
+                <div class="parraf">
+                    <p>Click aquí para ver los terminos y condiciones <a href="###">Terminos y condiciones</a></p>
+                </div>
+                <div class="boton">
+                    <input type="submit" value="Enviar"/>
+                </div>
+            </div>
+        </form>
+
+
+
+    </body>
+
+    </html>
+    <!--<button type="submit" onclick="list()">Enviar</button>
+    <!DOCTYPE html>
+    <html>
+    <head>
+        <meta charset="utf-8">
+        <title>Turismo</title>
+        <script type="text/javascript">
+                
+            function Avisa(){
+                var acepta=confirm("Atención se van a limpiar los datos del formulario"); 
+    
+                if (acepta)
+                return true;
+                else
+                return false;
+            }
+            function Verifica(){
+            
+            //Inicio Validación Nombres y Apellidos
+            if(document.miform.nombre.value=="" || document.miform.nombre.value==null){
+                alert("Debe Ingresar Nombres y Apellidos");
+                document.miform.nombre.focus();
+                return false;
+            }
+            var contador=0;//La variable contador calcula los radios no chequeados
+            var genero=document.getElementsByName("t2");
+            for(i=0;i<genero.length;i++){
+                if(genero.item(i).checked==false){
+                    contador=contador+1;
+                }
+             }
+             if(contador==genero.length){
+                 alert("Debe seleccionar Género");
+                 return false;
+             }
+            var cont=0;//La variable contador calcula los radios no chequeados
+            var viaje=document.getElementsByName("t3");
+            for(i=0;i<viaje.length;i++){
+                if(viaje.item(i).checked==false){
+                    cont=cont+1;
+                }
+             }
+             if(cont==viaje.length){
+                 alert("Debe seleccionar una ciudad");
+                 return false;
+             }
+    
+    
+    
+             
+    }
+            
+        </script>
+    </head>
+    <body>
+        <form name="miform" id="miform" onreset="return Avisa()" onsubmit="return Verifica()" >
+            Nombres y Apellidos: <input type="text" name="nombre" id="nombre" size="30" autocomplete="off"><br><br>
+            Género<br>
+            <input type="radio" name="t2"> Masculino <br>
+            <input type="radio" name="t2"> Femenino <br>
+            <input type="radio" name="t2"> Personalizado <br><br>
+            
+            Ciudades de interes:<br>
+            <input type="checkbox" name="t3" value="ST"> Santa Marta <br>
+            <input type="checkbox" name="t3" value="VL"> Villa de Leiva <br>
+            <input type="checkbox" name="t3" value="VC"> San Andres <br>
+            <input type="checkbox" name="t3" value="MT"> Medellín <br>
+            <br><br>
+            <input type="reset" value="Limpiar">
+            <input type="submit" value="Enviar">
+        </form>
+    
+    </body>
+    </html-->
+
+
+
+    <!--function Validar() {
+        var viaje= document.getElementsByName("t3").checked;
+        if (viaje=null || viaje="") {
+            alert("Debe seleccionar una Ciudad");
+            return false;
+        }
+    
+        
+    }-->
+    <!DOCTYPE html>
+    <html>
+
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title></title>
+        <link rel="stylesheet" href="style.css">
+        <script type="text/javascript">
+            function ValidarCorreoElectronico() {
+
+                //Se Captura Dirección del campo Correo
+                var ElCorreo = document.getElementById('Correo');
+
+                var ValidaCorreos = /^\w+([.-_+]?\w+)*@\w+([.-]?\w+)*(\.\w{2,10})+$/;
+
+                if (ValidaCorreos.test(ElCorreo.value)) {
+                    alert('Correo Electrónico Válido');
+                    return true;
+                } else {
+                    alert('Correo Electrónico Inválido');
+                    return false;
+                }
+            }
+        </script>
+    </head>
+
+    <body>
+        <div class="cor" id="cor">
+            <label for="Correo">Correo Electrónico: </label>
+            <input type="email" id="Correo" name="CorreoE" />
+            <input type="submit" value="Validar" onclick="return ValidarCorreoElectronico()" />
+        </div>
+    </body>
+
+    </html>
