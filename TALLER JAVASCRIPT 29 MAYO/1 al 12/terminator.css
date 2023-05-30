@@ -51,10 +51,10 @@ body{
     background-attachment: fixed;
     background-size: cover;
 }
-h1{
+header{
     text-align: center;
     position: sticky;
-    background-color: rgb(8, 126, 180);
+    background-color: rgb(9, 61, 85);
     top: 0;
     color: white;
     padding: 10px;
