@@ -1,0 +1,71 @@
+/*.ejer1{
+    background-color: aqua;
+    width: 20%;
+}
+.ejer2{    
+    margin-left: 25%;
+    margin-top: -4em;
+    background-color: red;
+    width: 20%;
+}
+.ejer3{
+    background-color: rgb(9, 247, 108);
+    width: 20%;
+    margin-top: -6em;
+    margin-left: 50%;
+
+}
+.ejer4{    
+    margin-left: 75%;
+    margin-top: -6em;
+    background-color: rgb(245, 122, 8);
+    width: 20%;
+}
+.ejer5{    
+    background-color: rgb(229, 245, 8);
+    width: 20%;
+}
+.ejer6{    
+    background-color: rgb(115, 245, 8);
+    width: 20%;
+    margin-left: 25%;
+    margin-top: -61em;
+}
+.ejer8{
+    margin-left: 75%;
+    margin-top: -6em;
+}
+body{
+    background-color: rgb(24, 108, 233)
+}*/
+/*#fibbo{
+    background-color: aquamarine;
+    border-style:solid;
+    border-color: blue;
+}*/
+body{
+    color: rgb(8, 126, 180);
+    font-family: cursive;
+    background-color: azure;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+h1{
+    text-align: center;
+    position: sticky;
+    background-color: rgb(8, 126, 180);
+    top: 0;
+    color: white;
+    padding: 10px;
+}
+.container{
+    margin-top: 10em;
+}
+.col input{
+    border: 1px solid rgb(8, 126, 180);
+    background:transparent;
+    border-radius: 5px;
+    outline: none;
+    font-size: 1em;
+}
