@@ -143,7 +143,7 @@ function transf() {
     let b = 0;
 
     while (a < 7) {
-    document.getElementById("parraf"+(a, b));
+    console.log(a, b);
     a++;
     b += 2;
     } 

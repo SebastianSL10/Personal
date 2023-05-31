@@ -192,8 +192,8 @@ function limit() {
 
 //////////Ejercicio 7///////////
 function ejer7(){
-    var arreglo = [2,15,8,4,2,3,15,9,7,1,5,16,4,18].sort();
     e = document.getElementById("resul7");
+    var arreglo = [2,15,8,4,2,3,15,9,7,1,5,16,4,18].sort();
     e.value = (arreglo);
 
     let unicElem = [];
@@ -202,7 +202,7 @@ function ejer7(){
 
     for (let i = 0; i < arreglo.length; i++) {
         if (arreglo[i+1] == arreglo[i]) {
-            document.write("<br>" + "Se repite el número "+ arreglo[i]);
+            //document.write("<br>" + "Se repite el número "+ arreglo[i]);
             contador ++;
         }else{
             unicElem.push(arreglo[i]);
@@ -259,6 +259,7 @@ function pob(){
 
 //////Ejercicio 14////////////
 function transf() {
+    let t = document.getElementById("resul14");
     /*Estructura normal
     for (a = 0, b = 0; a < 7; a++, b += 2){
     console.log(a,b)
@@ -269,7 +270,7 @@ function transf() {
     let b = 0;
 
     while (a < 7) {
-    document.getElementById("parraf"+(a, b));
+    t.value = ("<br>",a,"-", b);
     a++;
     b += 2;
     } 
