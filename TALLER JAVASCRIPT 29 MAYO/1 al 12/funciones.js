@@ -192,7 +192,8 @@ function limit() {
 
 //////////Ejercicio 7///////////
 function ejer7(){
-    e = document.getElementById("resul7");
+    let e = document.getElementById("resul7");
+    let r = document.getElementById("repi");
     var arreglo = [2,15,8,4,2,3,15,9,7,1,5,16,4,18].sort();
     e.value = (arreglo);
 
@@ -202,7 +203,7 @@ function ejer7(){
 
     for (let i = 0; i < arreglo.length; i++) {
         if (arreglo[i+1] == arreglo[i]) {
-            //document.write("<br>" + "Se repite el número "+ arreglo[i]);
+            r.value = ("Se repite el número "+ arreglo[i]); //document.write("<br>" + "Se repite el número "+ arreglo[i]);
             contador ++;
         }else{
             unicElem.push(arreglo[i]);
