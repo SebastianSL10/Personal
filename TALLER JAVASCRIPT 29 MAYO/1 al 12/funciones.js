@@ -155,12 +155,13 @@ for (let i = numero; i >= 2; i -= 2) {
 function numbusc(){
     var p = document.getElementById("array");
     var e = document.getElementById("encon");
+    var h = document.getElementById("encont");
     var arreglo = [];
     for (let s=0; s <=20; s++){
         arreglo.push(parseInt(Math.random()* (10)));
         
-    }      
-    var num=parseInt(document.getElementById("valor").value);
+    }    
+    var num = parseInt(document.getElementById("valor").value);
     p.value = ("Arreglo: ",arreglo);
     //document.write("<br>"+"Número buscado: ", num+"<br>");
     
@@ -175,8 +176,8 @@ function numbusc(){
     arreglo.forEach(busca);
     let r=arreglo.indexOf(num)
     if (d == false){
-        e.value =("El número no se encontró")
-    }else if(d==true)
+        h.value =("El número no se encontró")
+    }else if(d == true)
         e.value =("El número esta en la posición:" +r);
 }
 /////////Ejercicio 6/////////
@@ -190,21 +191,22 @@ function limit() {
     h.value = ("El arreglo es: [ "+arreglo+" ]");
 }
 
-//////////Ejercicio 7///////////
+////////////Ejercicio 7/////////////
 function ejer7(){
     let e = document.getElementById("resul7");
     let r = document.getElementById("repi");
-    var arreglo = [2,15,8,4,2,3,15,9,7,1,5,16,4,18].sort();
+    var arreglo = [2,18,4,2,3,15,15,5,16,4,18].sort();
     e.value = (arreglo);
 
     let unicElem = [];
     let repet = [];
     var contador = 1;
-
+    var x = "";
     for (let i = 0; i < arreglo.length; i++) {
         if (arreglo[i+1] == arreglo[i]) {
-            r.value = ("Se repite el número "+ arreglo[i]); //document.write("<br>" + "Se repite el número "+ arreglo[i]);
+            x += ("Se repite el número "+ arreglo[i] + "--") //document.write("<br>" + "Se repite el número "+ arreglo[i]);
             contador ++;
+            r.value = `${x}`
         }else{
             unicElem.push(arreglo[i]);
             repet.push(contador);
@@ -212,11 +214,11 @@ function ejer7(){
         }
     }
     for (let j = 0; j < unicElem.length; j++) {
-        //console.log("El número "+unicElem[j] + " se repite "+repet[j])  
+        //x +=("El número "+unicElem[j] + " se repite "+repet[j]);
     }
 }
 
-////////Ejercicio 8////////////
+////////////Ejercicio 8////////////
 function conv() {
 
     var num = document.getElementById("num").value;

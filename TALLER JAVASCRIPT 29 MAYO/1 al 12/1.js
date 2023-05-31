@@ -70,8 +70,8 @@ function limit() {
 
 //Ejercicio 7//
 function ejer7(){
-    var arreglo = [2,15,8,4,2,3,15,9,7,1,5,16,4,18].sort();
-    document.write(arreglo);
+    var arreglo = [2,15,18,4,2,3,15,7,5,16,4,18].sort();
+    console.log(arreglo);
 
     let unicElem = [];
     let repet = [];
@@ -79,7 +79,7 @@ function ejer7(){
 
     for (let i = 0; i < arreglo.length; i++) {
         if (arreglo[i+1] == arreglo[i]) {
-            document.write("<br>" + "Se repite el número "+ arreglo[i]);
+            console.log("<br>" + "Se repite el número "+ arreglo[i]);
             contador ++;
         }else{
             unicElem.push(arreglo[i]);
@@ -88,7 +88,7 @@ function ejer7(){
         }
     }
     for (let j = 0; j < unicElem.length; j++) {
-        //console.log("El número "+unicElem[j] + " se repite "+repet[j])  
+        console.log("El número "+unicElem[j] + " se repite "+repet[j])  
     }
 }
 

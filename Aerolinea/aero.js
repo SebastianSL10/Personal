@@ -6,7 +6,7 @@ function list() {
         return false;
     } else {
         document.getElementById("gen").style.border = "1px red";
-        return false;
+        return true;
     }
 
 }
