@@ -33,8 +33,11 @@ function mis(){;
     if (ValidaCorreos.test(ElCorreo.value)) {
         alert('Correo Electrónico Válido');
         return true;
+    }else{
+        alert('Correo Electrónico Inválido');
+        return false;
     }
-    if (document.formu.Dir.value == "" || document.formu.Dir.value == null) {
+    /*if (document.formu.Dir.value == "" || document.formu.Dir.value == null) {
         alert("Debe ingresar su dirección");
         return false;
     }
@@ -48,7 +51,7 @@ function mis(){;
     if (contador == Paque.length) {
         alert("Debe seleccionar un Itinerario");
         return false;
-    }
+    }*/
 }
 
     /*var Usu=document.getElementById("Nom");
