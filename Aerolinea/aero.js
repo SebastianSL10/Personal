@@ -10,7 +10,6 @@ function comprobar() {
         document.getElementById("edad").style.border = "2px solid black";
         document.getElementById("peso").style.border = "2px solid black";
         return false;
-
     }
 
     ///////Validacion del Genero//////////////////
@@ -52,16 +51,27 @@ function mis() {
     }
 }
 function si() {
-    //Valida si el nombre es valido
+    //Valida si el numero es valido
     var tele = document.getElementById('tel');
-    var age = document.getElementById("edad");
     var w = document.getElementById("peso");
     var Validaphone = /^\d{0,14}$/;
-    if (age.value != Validaphone || w.value != Validaphone || tele.value != Validaphone) {
+    if (w.value != Validaphone || tele.value != Validaphone) {
         alert("Los campos 𝐓𝐞𝐥𝐞́𝐟𝐨𝐧𝐨, Edad y Peso del Equipaje solo deben tener carácteres numéricos");
         return false;
     }else {
         alert('Bien');
+        return true;
+    }
+}
+function list(){
+    var age = document.getElementById("edad");
+    var Validaedad = /^\d{0,14}$/;
+    if (age.value != Validaedad){
+        alert("El campo Edad solo debe tener carácteres numéricos");
+        return false;
+    }
+    else {
+        alert('Bien edad');
         return true;
     }
 }
