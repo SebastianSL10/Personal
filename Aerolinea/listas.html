@@ -15,7 +15,7 @@
             <img src="latam-logo.png" alt="">
         </div>
         <h1>Latam Airlanes</h1>
-        <form name="formu" id="formu" action="" method="post" onsubmit="return comprobar()">
+        <form name="formu" id="formu" action="" method="post" onsubmit="return comprobar(),mis(),si()">
             <div class="col">
                 <h2>Datos del Viajero</h2>
                 <div class="formulario">
@@ -32,7 +32,7 @@
                 </div><br>
                 <div class="formulario">
                     <label for="telefono">Correo Electrónico:</label>
-                    <input type="text" name="Correo" id="Correo"></input>
+                    <input type="text" name="Correo" id="Correo" placeholder="Ruperto@gmail.com"></input>
                 </div><br>
                 <div class="formulario">
                     <label for="telefono">Edad:</label>
@@ -71,7 +71,7 @@
                     <p>Click aquí para ver los terminos y condiciones <a href="###">Terminos y condiciones</a></p>
                 </div>
                 <div class="boton">
-                    <input type="submit" value="Enviar"/>
+                    <input type="submit" value="Enviar">
                 </div>
             </div>
         </form>
@@ -167,39 +167,3 @@
     
         
     }-->
-    <!DOCTYPE html>
-    <html>
-
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title></title>
-        <link rel="stylesheet" href="style.css">
-        <script type="text/javascript">
-            function ValidarCorreoElectronico() {
-
-                //Se Captura Dirección del campo Correo
-                var ElCorreo = document.getElementById('Correo');
-
-                var ValidaCorreos = /^\w+([.-_+]?\w+)*@\w+([.-]?\w+)*(\.\w{2,10})+$/;
-
-                if (ValidaCorreos.test(ElCorreo.value)) {
-                    alert('Correo Electrónico Válido');
-                    return true;
-                } else {
-                    alert('Correo Electrónico Inválido');
-                    return false;
-                }
-            }
-        </script>
-    </head>
-
-    <body>
-        <div class="cor" id="cor">
-            <label for="Correo">Correo Electrónico: </label>
-            <input type="email" id="Correo" name="CorreoE" />
-            <input type="submit" value="Validar" onclick="return ValidarCorreoElectronico()" />
-        </div>
-    </body>
-
-    </html>

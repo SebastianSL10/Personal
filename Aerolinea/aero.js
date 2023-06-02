@@ -1,22 +1,23 @@
 function comprobar() {
     if (document.formu.Nom.value == "" || document.formu.Dir.value == "" || document.formu.tel.value == "" || document.formu.Correo.value == "" ||
         document.formu.edad.value == "" || document.formu.peso.value == "") {
-        alert("Todos los campos son obligatorios gonorreo");
+        alert("Todos los campos son obligatorios");
         document.formu.Nom.focus();
+        document.getElementById("Nom").style.border = "2px solid black";
         document.getElementById("Dir").style.border = "2px solid black";
         document.getElementById("tel").style.border = "2px solid black";
         document.getElementById("Correo").style.border = "2px solid black";
         document.getElementById("edad").style.border = "2px solid black";
         document.getElementById("peso").style.border = "2px solid black";
-        document.getElementById("gen").style.border = "2px solid black";
         return false;
+
     }
 
     ///////Validacion del Genero//////////////////
 
     var opc1 = document.getElementById("gen");
     if (opc1.value == null || opc1.value == "") {
-        alert("Tiene que escoger algún género zorro");
+        alert("Tiene que escoger algún género");
         document.getElementById("gen").style.border = "3px solid black";
         return false;
     }
@@ -30,7 +31,7 @@ function comprobar() {
         }
     }
     if (contador == Paque.length) {
-        alert("Debe seleccionar un Itinerario Sapa");
+        alert("Debe seleccionar un Itinerario");
         return false;
     }
     else {
@@ -38,18 +39,38 @@ function comprobar() {
         return true;
     }
 }
-
-
-
-
-
-
-
-
-
-
-
-
+function mis() {
+    //Valida si el correo es valido
+    var ElCorreo = document.getElementById('Correo');
+    var ValidaCorreos = /^\w+([.-_+]?\w+)*@\w+([.-]?\w+)*(\.\w{2,10})+$/;
+    if (ValidaCorreos.test(ElCorreo.value)) {
+        return true;
+    } else {
+        alert('Correo Electrónico Inválido');
+        document.formu.Correo.focus();
+        return false;
+    }
+}
+function si() {
+    //Valida si el nombre es valido
+    var tele = document.getElementById('tel');
+    var age = document.getElementById("edad");
+    var w = document.getElementById("peso");
+    var Validaphone = /^\d{0,14}$/;
+    if (age.value != Validaphone || w.value != Validaphone || tele.value != Validaphone) {
+        alert("Los campos 𝐓𝐞𝐥𝐞́𝐟𝐨𝐧𝐨, Edad y Peso del Equipaje solo deben tener carácteres numéricos");
+        return false;
+    }else {
+        alert('Bien');
+        return true;
+    }
+}
+/*
+usuario: /^[a-zA-Z0-9\_\-]{4,16}$/ // Letras, numeros, guion y guion_bajo
+nombre: /^[a-zA-ZÀ-ÿ\s]{1,40}$/, // Letras y espacios, pueden llevar acentos.
+password: /^.{4,12}$/, // 4 a 12 digitos.
+correo: /^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/,
+telefono: /^\d{7,14}$/ // 7 a 14 numeros.  */
 
 
 
@@ -132,10 +153,6 @@ else{
         }
 
     }
-    usuario: /^[a-zA-Z0-9\_\-]{4,16}$/, // Letras, numeros, guion y guion_bajo
-nombre: /^[a-zA-ZÀ-ÿ\s]{1,40}$/, // Letras y espacios, pueden llevar acentos.
-password: /^.{4,12}$/, // 4 a 12 digitos.
-correo: /^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/,
-telefono: /^\d{7,14}$/ // 7 a 14 numeros.    
+  
     
 */
