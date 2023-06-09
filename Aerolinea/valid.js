@@ -7,6 +7,7 @@ window.addEventListener('load', () => {
     const peso = document.getElementById('peso')
     const email = document.getElementById('email')
     const itin = document.getElementById('iti')
+    const Gen = document.getElementById('gen')
 
 
     form.addEventListener('submit', (e) => {
@@ -22,7 +23,6 @@ window.addEventListener('load', () => {
         const FechaValor = fecha.value.trim()
         const pesoValor = peso.value.trim()
         const emailValor = email.value.trim()
-
         //validando campo usuario
         //(!usuarioValor) ? console.log('CAMPO VACIO') : console.log(usuarioValor)
         if (!usuarioValor) {
@@ -75,21 +75,29 @@ window.addEventListener('load', () => {
             validaOk(email)
         }
 
-    ///////Validacion del Itinerario//////////////////
-
-    var contador = 0;     //La variable contador calcula los radios no chequeados
-    var Paque = document.getElementsByName("iti");
-    for (i = 0; i < Paque.length; i++) {
-        if (Paque.item(i).checked == false) {
-            contador = contador + 1;
+        ///////Validacion del Genero//////////////////
+        var opc1 = document.getElementById("gen");
+        if (opc1.value == null || opc1.value == "") {
+            validaFalla(Gen, "Tiene que escoger algún género");
+            return false;
+        } else{
+            validaOk(Gen)
         }
-    }
-    if (contador == Paque.length) {
-        validaFalla( itin,"Debe seleccionar un Itinerario");
-        return false;
-    }else {
-        validaOk(itin)
-    }
+
+        ///////Validacion del Itinerario//////////////////
+        var contador = 0;     //La variable contador calcula los radios no chequeados
+        var Paque = document.getElementsByName("iti");
+        for (i = 0; i < Paque.length; i++) {
+            if (Paque.item(i).checked == false) {
+                contador = contador + 1;
+            }
+        }
+        if (contador == Paque.length) {
+            validaFalla(itin, "Debe seleccionar un Itinerario");
+            return false;
+        } else {
+            validaOk(itin)
+        }
 
     }
 

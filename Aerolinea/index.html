@@ -39,6 +39,12 @@
                 </div>
 
                 <div class="form-control">
+                    <label for="email">E-mail</label>
+                    <input id="email" type="email">
+                    <p></p>
+                </div>
+
+                <div class="form-control">
                     <label for="edad">Fecha de Nacimiento</label>
                     <input id="date" type="date">
                     <p></p>
@@ -51,8 +57,12 @@
                 </div>
 
                 <div class="form-control">
-                    <label for="email">E-mail</label>
-                    <input id="email" type="email">
+                    Género: <select name="gen" id="gen">
+                        <option value="">Seleccione su Género</option>
+                        <option value="Masc">Masculino</option>
+                        <option value="Fem">Femenino</option>
+                        <option value="Otr">Otro</option>
+                    </select>
                     <p></p>
                 </div>
 
@@ -81,8 +91,8 @@
                 <button>Enviar</button>
             </form>
         </div>
-    </div>    
-        <script src="valid.js"></script>
+    </div>
+    <script src="valid.js"></script>
 </body>
 
 </html>
