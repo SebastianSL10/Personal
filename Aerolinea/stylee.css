@@ -121,3 +121,9 @@ header{
     visibility: visible;
     color:#ff1900;
 }
+
+
+
+/*    const validadirec = (Dir) =>{
+        return /^(Calle|Carrera|Cra|Avenida)\\s\\d{2}\\#\\d{3}\\s[a-zA-Z\\s]+$/.test(Dir);
+    }*/

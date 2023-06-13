@@ -1,4 +1,4 @@
-const fechaNacimiento = document.getElementById("fechaNacimiento");
+/*const fechaNacimiento = document.getElementById("fechaNacimiento");
 const edad = document.getElementById("edad");
 
 const calcularEdad = (fechaNacimiento) => {
@@ -31,4 +31,13 @@ window.addEventListener('load', function () {
         }
     });
 
-});
+});*/
+
+console.log(window);
+console.log(document);
+
+let texto = "Hola soy tu amigo Juan Diaz"
+const hablar =(texto) => speechSynthesis.
+speak(new SpeechSynthesisUtterance(texto));
+
+hablar(texto);

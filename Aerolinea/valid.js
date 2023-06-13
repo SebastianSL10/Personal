@@ -38,7 +38,7 @@ window.addEventListener('load', () => {
         if (!DirValor) {
             //console.log('CAMPO VACIO')
             validaFalla(Dir, 'Campo vacío')
-        } else {
+        }else {
             validaOk(Dir)
         }
 
@@ -46,8 +46,10 @@ window.addEventListener('load', () => {
         if (!teleValor) {
             //console.log('CAMPO VACIO')
             validaFalla(tele, 'Campo vacío')
-        } else if (teleValor.length < 9) {
-            validaFalla(tele, 'El teléfono debe tener 9 carácteres cómo mínimo.')
+        } else if (teleValor.length < 8) {
+            validaFalla(tele, 'El teléfono debe tener 8 carácteres cómo mínimo.')    
+        } else if (teleValor.length > 10) {
+            validaFalla(tele, 'El teléfono debe tener 10 carácteres cómo máximo.')
         } else {
             validaOk(tele)
         }
@@ -98,7 +100,7 @@ window.addEventListener('load', () => {
             validaFalla(itin, "Debe seleccionar un Itinerario");
             return false;
         } else {
-            validaOk(itin, "Formulario enviado Correctamente")
+            validar(itin, "Formulario enviado Correctamente")
             return true;
         }
 
@@ -115,11 +117,16 @@ window.addEventListener('load', () => {
         const formControl = input.parentElement
         formControl.className = 'form-control ok'
     }
+    const validar = (input, msje) => {
+        let formControl = input.parentElement
+        const h = formControl.querySelector('p')
+        h.innerText = msje
+        formControl.className = 'form-control ok'
+    }
 
     const validaEmail = (email) => {
         return /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/.test(email);
-    }
-    
+    }    
     const validaNombre = (usuario) => {
         return /^[A-ZÑa-zñáéíóúÁÉÍÓÚ'° ]+$/.test(usuario);
     }
